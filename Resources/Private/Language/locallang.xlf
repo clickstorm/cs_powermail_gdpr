@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-16T07:39:05Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-16T08:23:36Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -10,6 +10,9 @@
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle">
 				<source>Show privacy policy</source>
+			</trans-unit>
+			<trans-unit id="tx_cspowermailgdpr.checkbox.marker">
+				<source>Privacy Policy</source>
 			</trans-unit>
 		</body>
 	</file>

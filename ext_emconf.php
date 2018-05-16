@@ -11,7 +11,7 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'GDPR powermail checkbox',
+    'title' => '[clickstorm] GDPR powermail checkbox',
     'description' => '',
     'category' => 'plugin',
     'author' => 'Marc Hirdes',

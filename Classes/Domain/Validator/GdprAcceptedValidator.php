@@ -6,6 +6,7 @@ use In2code\Powermail\Domain\Validator\AbstractValidator;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Error\Error;
 use TYPO3\CMS\Extbase\Error\Result;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 /***************************************************************
  *
@@ -48,7 +49,8 @@ class GdprAcceptedValidator extends AbstractValidator
         if(!$mail->getForm()->isTxCspowermailgdprHidden()) {
             $params = GeneralUtility::_GP('tx_powermail_pi1');
             if(!$params['field']['tx_cspowermailgdpr_accepted']) {
-                $result->addError(GeneralUtility::makeInstance(Error::class, 'Error', 'tx_cspowermailgdpr_accepted'));
+                $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'cs_powermail_gdpr') . ':';
+                $result->addError(GeneralUtility::makeInstance(Error::class, 'mandatory', $errorMarker));
             }
         }
 
