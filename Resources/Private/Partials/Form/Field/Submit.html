@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{form.txCspowermailgdprHidden}">
+	<f:else>
+		<f:render partial="Form/Field/TxCspowermailgdprCheckbox" arguments="{_all}"/>
+	</f:else>
+</f:if>
+
+<div class="powermail_fieldwrap powermail_fieldwrap_type_submit powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
+	<div class="{settings.styles.framework.fieldWrappingClasses} {settings.styles.framework.offsetClasses}">
+		<f:form.submit value="{field.title}" class="{settings.styles.framework.submitClasses}" />
+	</div>
+</div>

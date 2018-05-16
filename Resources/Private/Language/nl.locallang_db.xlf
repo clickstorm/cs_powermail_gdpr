@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="nl" datatype="plaintext" original="messages" date="2018-05-15T13:41:24Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="tx_powermail_domain_model_form.tx_cspowermailgdpr_hidden" approved="yes">
+				<source>Hide checkbox privacy statement</source>
+				<target>Verberg checkbox privacy verklaring</target>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_mail.tx_cspowermailgdpr_accepted" approved="yes">
+				<source>Privacy Policy accepted</source>
+				<target>Privacybeleid geaccepteerd</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

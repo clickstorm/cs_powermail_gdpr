@@ -1,0 +1,51 @@
+plugin.tx_powermail {
+	view {
+		partialRootPaths {
+			5 = EXT:cs_powermail_gdpr/Resources/Private/Partials/
+		}
+	}
+
+	settings.setup {
+		privacyPid = {$plugin.tx_powermail.settings.privacyPid}
+		validators {
+			105 {
+				class = Clickstorm\CsPowermailGdpr\Domain\Validator\GdprAcceptedValidator
+			}
+		}
+	}
+}
+
+config.tx_extbase {
+	objects {
+		In2code\Powermail\Domain\Model\Form {
+			className = Clickstorm\CsPowermailGdpr\Domain\Model\Form
+		}
+		In2code\Powermail\Domain\Model\Mail {
+			className = Clickstorm\CsPowermailGdpr\Domain\Model\Mail
+		}
+	}
+	persistence {
+		classes {
+			In2code\Powermail\Domain\Model\Form {
+				subclasses {
+					0 = Clickstorm\CsPowermailGdpr\Domain\Model\Form
+				}
+			}
+			In2code\Powermail\Domain\Model\Mail {
+				subclasses {
+					0 = Clickstorm\CsPowermailGdpr\Domain\Model\Mail
+				}
+			}
+			Clickstorm\CsPowermailGdpr\Domain\Model\Form {
+				mapping {
+					tableName = tx_powermail_domain_model_form
+				}
+			}
+			Clickstorm\CsPowermailGdpr\Domain\Model\Mail {
+				mapping {
+					tableName = tx_powermail_domain_model_mail
+				}
+			}
+		}
+	}
+}

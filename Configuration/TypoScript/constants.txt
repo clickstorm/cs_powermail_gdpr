@@ -1,0 +1,2 @@
+# cat=powermail_gdpr//0010; type=int+; label= Privacy PID: This page will be linked in the checkbox label
+plugin.tx_powermail.settings.privacyPid =

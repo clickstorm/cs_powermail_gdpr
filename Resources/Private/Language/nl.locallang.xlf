@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="nl" datatype="plaintext" original="messages" date="2018-05-16T07:39:05Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="tx_cspowermailgdpr.checkbox.label" approved="yes">
+				<source>I accept the ###privacy policy###.</source>
+				<target>Ik ga akkoord met het ###privacybeleid###.</target>
+			</trans-unit>
+			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle" approved="yes">
+				<source>Show privacy policy</source>
+				<target>Toon privacybeleid</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-15T13:41:24Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="tx_powermail_domain_model_form.tx_cspowermailgdpr_hidden">
+				<source>Hide checkbox privacy statement</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_mail.tx_cspowermailgdpr_accepted">
+				<source>Privacy Policy accepted</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

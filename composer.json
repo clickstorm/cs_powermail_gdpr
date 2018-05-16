@@ -1,0 +1,22 @@
+{
+	"name": "clickstorm/cs_powermail_gdpr",
+	"type": "typo3-cms-extension",
+	"description": "GDPR powermail checkbox",
+	"homepage": "https://www.clickstorm.de",
+	"license": ["GPL-2.0+"],
+	"keywords": ["TYPO3 CMS", "clickstorm"],
+	"version": "2.0.0",
+	"replace": {
+		"cs_powermail_gdpr": "*"
+	},
+	"require": {
+		"typo3/cms-core": "7.6.0 - 8.7.99",
+		"in2code/powermail": "5.0.0 - 6.99.99",
+	  	"fluidtypo3/vhs": "^4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Clickstorm\\CsPowermailGdpr\\": "Classes/"
+		}
+	}
+}
