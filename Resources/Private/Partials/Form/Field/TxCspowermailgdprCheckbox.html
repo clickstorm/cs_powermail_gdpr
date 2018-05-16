@@ -10,7 +10,7 @@
 								property="tx_cspowermailgdpr_accepted."
 								value="1"
 								id="powermail_field_tx_cspowermailgdpr_accepted_0"
-								additionalAttributes="{required:'required'}"
+								additionalAttributes="{required:'required',data-parsley-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-parsley-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
 								class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
 
 				<v:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label',extensionName:'cs_powermail_gdpr')}"
@@ -21,9 +21,8 @@
 				</v:iterator.explode>
 			</label>
 		</div>
-
 		<f:if condition="{settings.validation.client}">
-			<div class="powermail_field_error_container powermail_field_error_container_{field.marker}"></div>
+			<div class="powermail_field_error_container powermail_field_error_container_tx_cspowermailgdpr_accepted"></div>
 		</f:if>
 	</div>
 </div>
