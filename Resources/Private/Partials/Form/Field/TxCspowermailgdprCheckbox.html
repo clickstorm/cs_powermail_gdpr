@@ -15,7 +15,7 @@
 
 				<v:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label',extensionName:'cs_powermail_gdpr')}"
 				                    glue="###" as="label">
-					{label.0}<f:link.page pageUid="{settings.setup.privacyPid}"
+					{label.0}<f:link.page pageUid="{settings.privacyPid}"
 					             target="_blank"
 					             title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle',extensionName:'cs_powermail_gdpr')}">{label.1}</f:link.page>{label.2}
 				</v:iterator.explode>
