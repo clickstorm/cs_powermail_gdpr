@@ -9,19 +9,29 @@ Feel free to test and give feedback.
 
 ## configuration
 
+### Privacy Pid
+
 Set your privacy policy page with a TypoScript constant.
 ```
 plugin.tx_powermail.settings.privacyPid =
 ```
 
-Override language labels.
+### Override language labels
+
+You can override the language labels via TypoScript
+
+```
+plugin.tx_powermail._LOCAL_LANG.en.tx_cspowermailgdpr.checkbox.label = I accept the ###privacy policy###.
+```
+
+or in an extra locallang file
 
 ```php
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf'][] = 
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf'][10] = 
     'EXT:myext/Resources/Private/Language/locallang.xlf';
 ```
 
-Then you can override `tx_cspowermailgdpr.checkbox.label`. `###` will be replaces by the link, e.g.:
+There you can override `tx_cspowermailgdpr.checkbox.label`. `###` will be replaces by the link, e.g.:
 
 ```
 I accept the ###privacy policy###.
