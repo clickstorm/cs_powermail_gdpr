@@ -3,6 +3,9 @@ plugin.tx_powermail {
 		partialRootPaths {
 			5 = EXT:cs_powermail_gdpr/Resources/Private/Partials/
 		}
+		templateRootPaths {
+			5 = EXT:cs_powermail_gdpr/Resources/Private/Templates/
+		}
 	}
 
 	settings.setup {

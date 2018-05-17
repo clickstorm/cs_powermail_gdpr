@@ -5,11 +5,20 @@ defined('TYPO3_MODE') || die('Access denied.');
 $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
     \TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class
 );
+
 $signalSlotDispatcher->connect(
     'In2code\Powermail\Controller\FormController',
     'createActionBeforeRenderView',
     'Clickstorm\CsPowermailGdpr\Hook\FormController',
     'manipulateForm',
+    FALSE
+);
+
+$signalSlotDispatcher->connect(
+    'In2code\Powermail\Controller\FormController',
+    'confirmationActionBeforeRenderView',
+    'Clickstorm\CsPowermailGdpr\Hook\FormController',
+    'manipulateFormForConfirmation',
     FALSE
 );
 
