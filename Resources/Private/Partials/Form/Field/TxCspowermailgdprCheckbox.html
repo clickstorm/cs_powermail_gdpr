@@ -13,11 +13,11 @@
 								additionalAttributes="{required:'required',data-parsley-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-parsley-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
 								class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
 
-				<v:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label',extensionName:'cs_powermail_gdpr')}"
+				<v:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label')}"
 				                    glue="###" as="label">
 					{label.0}<f:link.page pageUid="{settings.privacyPid}"
 					             target="_blank"
-					             title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle',extensionName:'cs_powermail_gdpr')}">{label.1}</f:link.page>{label.2}
+					             title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">{label.1}</f:link.page>{label.2}
 				</v:iterator.explode>
 			</label>
 		</div>
