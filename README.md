@@ -27,7 +27,7 @@ plugin.tx_powermail._LOCAL_LANG.en.tx_cspowermailgdpr.checkbox.label = I accept 
 or in an extra locallang file
 
 ```php
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf'][10] = 
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:powermail/Resources/Private/Language/locallang.xlf'][10] = 
     'EXT:myext/Resources/Private/Language/locallang.xlf';
 ```
 
