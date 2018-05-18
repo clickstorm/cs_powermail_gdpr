@@ -41,7 +41,9 @@ class FormController
      */
     public function manipulateForm($mail, $hash, $formController)
     {
-        $mail->setTxCspowermailgdprAccepted($this->checkParam());
+        if(!$mail->isTxCspowermailgdprAccepted()) {
+            $mail->setTxCspowermailgdprAccepted($this->checkParam());
+        }
     }
 
     /**
