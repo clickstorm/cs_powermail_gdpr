@@ -13,7 +13,7 @@ Feel free to test and give feedback.
 
 Set your privacy policy page with a TypoScript constant.
 ```
-plugin.tx_powermail.settings.privacyPid =
+plugin.tx_powermail.settings.setup.privacyPid =
 ```
 
 ### Override language labels
