@@ -30,7 +30,7 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.1.2-dev',
     'constraints' => [
         'depends' => [
-            'typo3' => '7.6.0-8.7.99',
+            'typo3' => '7.6.0-9.5.99',
             'powermail' => '4.0',
             'vhs' => '4.0'
         ],
