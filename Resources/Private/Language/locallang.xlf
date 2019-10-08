@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-16T08:23:36Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-10-08T13:37:01Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="\In2code\Powermail\Domain\Model\Mail.txCspowermailgdprAccepted">
+				<source><![CDATA[Privacy Policy accepted]]></source>
+			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label">
-				<source>I accept the ###privacy policy###.</source>
+				<source><![CDATA[I accept the ###privacy policy###.]]></source>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle">
-				<source>Show privacy policy</source>
+				<source><![CDATA[Show privacy policy]]></source>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.marker">
-				<source>Privacy Policy</source>
+				<source><![CDATA[Privacy Policy]]></source>
 			</trans-unit>
 		</body>
 	</file>
