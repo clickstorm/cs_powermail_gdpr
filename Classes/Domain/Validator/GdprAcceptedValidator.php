@@ -47,8 +47,9 @@ class GdprAcceptedValidator extends AbstractValidator
 
         // throw error
         if(!$mail->getForm()->isTxCspowermailgdprHidden()) {
-            $params = GeneralUtility::_GP('tx_powermail_pi1');
-            if(!$params['field']['tx_cspowermailgdpr_accepted']) {
+            $params = GeneralUtility::_GPmerged($this->variablesPrefix);
+
+            if($params['action'] === 'create' && !$params['field']['tx_cspowermailgdpr_accepted']) {
                 $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'cs_powermail_gdpr') . ':';
                 $result->addError(GeneralUtility::makeInstance(Error::class, 'mandatory', $errorMarker));
             }
