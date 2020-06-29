@@ -27,12 +27,12 @@ $EM_CONF[$_EXTKEY] = [
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '1.3.1-dev',
+    'version' => '1.3.2-dev',
     'constraints' => [
         'depends' => [
-            'typo3' => '7.6.0-9.5.99',
-            'powermail' => '4.0',
-            'vhs' => '4.0'
+            'typo3' => '7.6.0-10.4.99',
+            'powermail' => '4.0-8.1',
+            'vhs' => '4.0-6.0'
         ],
         'conflicts' => [
         ],
