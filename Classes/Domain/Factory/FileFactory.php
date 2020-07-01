@@ -5,6 +5,10 @@ namespace Clickstorm\CsPowermailGdpr\Domain\Factory;
 
 use In2code\Powermail\Domain\Model\Answer;
 use In2code\Powermail\Domain\Model\File;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
+use TYPO3\CMS\Extbase\Object\Exception;
+use TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException;
 
 /**
  * Class FileFactory
@@ -12,23 +16,35 @@ use In2code\Powermail\Domain\Model\File;
 class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
 {
 
-
     /**
      * formRepository
      *
      * @var \In2code\Powermail\Domain\Repository\FormRepository
-     * @inject
      */
-    protected $formRepository;
+    protected $formRepository = null;
 
     /**
-     * Get instance of File from existing answer
+     * Inject a formRepository
      *
-     * @param string $fileName
-     * @param Answer $answer
-     * @return File|null
+     * @param \In2code\Powermail\Domain\Repository\FormRepository $formRepository
      */
-    public function getInstanceFromExistingAnswerValue($fileName, Answer $answer)
+    public function injectFormRepository(\In2code\Powermail\Domain\Repository\FormRepository $formRepository)
+    {
+        $this->formRepository = $formRepository;
+    }
+
+	/**
+	 * Get instance of File from existing answer
+	 *
+	 * @param string $fileName
+	 * @param Answer $answer
+	 * @return File
+	 * @throws Exception
+	 * @throws ExtensionConfigurationExtensionNotConfiguredException
+	 * @throws ExtensionConfigurationPathDoesNotExistException
+	 * @throws InvalidQueryException
+	 */
+	public function getInstanceFromExistingAnswerValue(string $fileName, Answer $answer): File
     {
         $form = $answer->getField()->getPages()->getForms();
         $marker = $answer->getField()->getMarker();
