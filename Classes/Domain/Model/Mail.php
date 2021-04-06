@@ -1,9 +1,6 @@
 <?php
-namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
-use In2code\Powermail\Utility\ArrayUtility;
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
 /**
  * Class Mail
@@ -11,7 +8,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Mail extends \In2code\Powermail\Domain\Model\Mail
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $txCspowermailgdprAccepted;
 

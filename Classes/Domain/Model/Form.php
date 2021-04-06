@@ -1,13 +1,6 @@
 <?php
-namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
-use In2code\Powermail\Domain\Repository\FormRepository;
-use In2code\Powermail\Utility\ConfigurationUtility;
-use In2code\Powermail\Utility\ObjectUtility;
-use In2code\Powermail\Utility\StringUtility;
-use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
 /**
  * Class Form
@@ -15,11 +8,9 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Form extends \In2code\Powermail\Domain\Model\Form
 {
     /**
-     * @var boolean
+     * @var bool
      */
     protected $txCspowermailgdprHidden;
-
-
 
     /**
      * @return bool

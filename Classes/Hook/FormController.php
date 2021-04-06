@@ -41,7 +41,7 @@ class FormController
      */
     public function manipulateForm($mail, $hash, $formController)
     {
-        if(!$mail->isTxCspowermailgdprAccepted()) {
+        if (!$mail->isTxCspowermailgdprAccepted()) {
             $mail->setTxCspowermailgdprAccepted($this->checkParam());
         }
     }
@@ -60,7 +60,8 @@ class FormController
     /**
      * @return int
      */
-    protected function checkParam() {
+    protected function checkParam()
+    {
         $params = GeneralUtility::_GP('tx_powermail_pi1');
         return $params['field']['tx_cspowermailgdpr_accepted']?1:0;
     }

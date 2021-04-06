@@ -1,7 +1,7 @@
 <?php
+
 declare(strict_types=1);
 namespace Clickstorm\CsPowermailGdpr\Domain\Factory;
-
 
 use In2code\Powermail\Domain\Model\Answer;
 use In2code\Powermail\Domain\Model\File;
@@ -21,7 +21,7 @@ class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
      *
      * @var \In2code\Powermail\Domain\Repository\FormRepository
      */
-    protected $formRepository = null;
+    protected $formRepository;
 
     /**
      * Inject a formRepository
@@ -33,18 +33,18 @@ class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
         $this->formRepository = $formRepository;
     }
 
-	/**
-	 * Get instance of File from existing answer
-	 *
-	 * @param string $fileName
-	 * @param Answer $answer
-	 * @return File
-	 * @throws Exception
-	 * @throws ExtensionConfigurationExtensionNotConfiguredException
-	 * @throws ExtensionConfigurationPathDoesNotExistException
-	 * @throws InvalidQueryException
-	 */
-	public function getInstanceFromExistingAnswerValue(string $fileName, Answer $answer): File
+    /**
+     * Get instance of File from existing answer
+     *
+     * @param string $fileName
+     * @param Answer $answer
+     * @return File
+     * @throws Exception
+     * @throws ExtensionConfigurationExtensionNotConfiguredException
+     * @throws ExtensionConfigurationPathDoesNotExistException
+     * @throws InvalidQueryException
+     */
+    public function getInstanceFromExistingAnswerValue(string $fileName, Answer $answer): File
     {
         $form = $answer->getField()->getPage()->getForm();
         $marker = $answer->getField()->getMarker();
@@ -53,5 +53,4 @@ class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
 
         return $this->makeFileInstance($marker, $fileName, 0, '', '', true, $form);
     }
-
 }
