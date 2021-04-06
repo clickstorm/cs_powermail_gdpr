@@ -46,12 +46,12 @@ class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
 	 */
 	public function getInstanceFromExistingAnswerValue(string $fileName, Answer $answer): File
     {
-        $form = $answer->getField()->getPages()->getForms();
+        $form = $answer->getField()->getPage()->getForm();
         $marker = $answer->getField()->getMarker();
 
         $form = $this->formRepository->findByUid($form->getUid());
 
-        return $this->makeFileInstance($marker, $fileName, null, null, null, true, $form);
+        return $this->makeFileInstance($marker, $fileName, 0, '', '', true, $form);
     }
 
 }
