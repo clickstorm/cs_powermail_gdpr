@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:gdpr="http://typo3.org/ns/Clickstorm/CsPowermailGdpr/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <div class="powermail_fieldwrap powermail_fieldwrap_type_check powermail_fieldwrap_tx_cspowermailgdpr_accepted {settings.styles.framework.fieldAndLabelWrappingClasses}">
@@ -13,12 +13,12 @@
 								additionalAttributes="{required:'required',data-parsley-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-parsley-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
 								class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
 
-				<v:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label')}"
+				<gdpr:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label')}"
 				                    glue="###" as="label">
 					{label.0}<f:link.page pageUid="{settings.privacyPid}"
 					             target="_blank"
 					             title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">{label.1}</f:link.page>{label.2}<span class="mandatory">*</span>
-				</v:iterator.explode>
+				</gdpr:iterator.explode>
 			</label>
 		</div>
 		<f:if condition="{settings.validation.client}">

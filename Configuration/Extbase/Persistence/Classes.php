@@ -13,6 +13,11 @@ return [
             0 => \Clickstorm\CsPowermailGdpr\Domain\Model\Mail::class
         ]
     ],
+    \In2code\Powermail\Domain\Factory\FileFactory::class => [
+        'subclasses' => [
+            0 => \Clickstorm\CsPowermailGdpr\Domain\Factory\FileFactory::class
+        ]
+    ],
     \Clickstorm\CsPowermailGdpr\Domain\Model\Form::class => [
         'tableName' => 'tx_powermail_domain_model_form'
     ],

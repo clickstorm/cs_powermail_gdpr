@@ -3,6 +3,7 @@
 declare(strict_types=1);
 namespace Clickstorm\CsPowermailGdpr\Domain\Factory;
 
+use In2code\Powermail\Domain\Repository\FormRepository;
 use In2code\Powermail\Domain\Model\Answer;
 use In2code\Powermail\Domain\Model\File;
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
@@ -28,7 +29,7 @@ class FileFactory extends \In2code\Powermail\Domain\Factory\FileFactory
      *
      * @param \In2code\Powermail\Domain\Repository\FormRepository $formRepository
      */
-    public function injectFormRepository(\In2code\Powermail\Domain\Repository\FormRepository $formRepository)
+    public function injectFormRepository(FormRepository $formRepository)
     {
         $this->formRepository = $formRepository;
     }
