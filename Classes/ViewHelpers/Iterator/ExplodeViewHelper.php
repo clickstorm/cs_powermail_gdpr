@@ -12,6 +12,8 @@ use TYPO3\CMS\Core\Resource\FileCollectionRepository;
  */
 class ExplodeViewHelper extends AbstractViewHelper
 {
+    protected $escapeOutput = false;
+
     public function initializeArguments(): void
     {
         parent::initializeArguments();
@@ -19,6 +21,13 @@ class ExplodeViewHelper extends AbstractViewHelper
             'glue',
             'string',
             'String "glue" that separates values. If you need a constant (like PHP_EOL), use v:const to read it.',
+            false,
+            ','
+        );
+        $this->registerArgument(
+            'content',
+            'string',
+            'The content to explode',
             false,
             ','
         );
