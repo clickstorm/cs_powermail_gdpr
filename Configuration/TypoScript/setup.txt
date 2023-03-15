@@ -10,11 +10,15 @@ plugin.tx_powermail {
 
 	settings.setup {
 		privacyPid = {$plugin.tx_powermail.settings.privacyPid}
-		validators {
-			105 {
-				class = Clickstorm\CsPowermailGdpr\Domain\Validator\GdprAcceptedValidator
+        validators {
+            50 {
+                class = Clickstorm\CsPowermailGdpr\Domain\Validator\GdprAcceptedValidator
+                config {
+                }
 			}
 		}
+        _LOCAL_LANG.default.validationerror_validation.100 = Please accept the privacy policý
+        _LOCAL_LANG.de.validationerror_validation.100 = Bitte akzeptiere die Datenschutzerklärung
 	}
 }
 

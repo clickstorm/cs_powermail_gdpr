@@ -10,8 +10,8 @@
 				<target><![CDATA[Privacybeleid geaccepteerd]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label" approved="yes">
-				<source><![CDATA[I accept the ###privacy policy###.]]></source>
-				<target><![CDATA[Ik ga akkoord met het ###privacybeleid###.]]></target>
+				<source><![CDATA[I accept the ###privacyUrl###.]]></source>
+				<target><![CDATA[Ik ga akkoord met het ###privacyUrl###.]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle" approved="yes">
 				<source><![CDATA[Show privacy policy]]></source>

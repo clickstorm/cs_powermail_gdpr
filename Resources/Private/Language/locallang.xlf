@@ -9,7 +9,7 @@
 				<source><![CDATA[Privacy Policy accepted]]></source>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label">
-				<source><![CDATA[I accept the ###privacy policy###.]]></source>
+				<source><![CDATA[I accept the ###privacyUrl###.]]></source>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle">
 				<source><![CDATA[Show privacy policy]]></source>

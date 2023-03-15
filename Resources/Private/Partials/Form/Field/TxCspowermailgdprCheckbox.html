@@ -3,26 +3,30 @@
       data-namespace-typo3-fluid="true">
 
 <div class="powermail_fieldwrap powermail_fieldwrap_type_check powermail_fieldwrap_tx_cspowermailgdpr_accepted {settings.styles.framework.fieldAndLabelWrappingClasses}">
-	<div class="{settings.styles.framework.fieldWrappingClasses}">
-		<div class="{settings.styles.framework.checkClasses}">
-			<label>
-				<f:form.checkbox
-								property="tx_cspowermailgdpr_accepted."
-								value="1"
-								id="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}"
-								additionalAttributes="{required:'required',data-parsley-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-parsley-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
-								class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
+    <div class="{settings.styles.framework.fieldWrappingClasses}">
+        <div class="{settings.styles.framework.checkClasses}">
+            <f:form.checkbox
+                property="tx_cspowermailgdpr_accepted."
+                value="1"
+                id="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}"
+                additionalAttributes="{required:'required',data-powermail-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-powermail-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
+                class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
 
-				<gdpr:iterator.explode content="{f:translate(key:'tx_cspowermailgdpr.checkbox.label')}"
-				                    glue="###" as="label">
-					{label.0}<f:link.page pageUid="{settings.privacyPid}"
-					             target="_blank"
-					             title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">{label.1}</f:link.page>{label.2}<span class="mandatory">*</span>
-				</gdpr:iterator.explode>
-			</label>
-		</div>
-		<f:if condition="{settings.validation.client}">
-			<div class="powermail_field_error_container powermail_field_error_container_tx_cspowermailgdpr_accepted"></div>
-		</f:if>
-	</div>
+            <label for="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}">
+                <f:variable name="privacyLink">
+                    <f:link.page pageUid="{settings.privacyPid}" target="_blank"
+                                 title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">
+                        <f:translate key="tx_cspowermailgdpr.checkbox.marker" />
+                    </f:link.page>
+                </f:variable>
+
+                <gdpr:strReplace search="###privacyUrl###" replace="{privacyLink}">
+                    {f:translate(key:'tx_cspowermailgdpr.checkbox.label')}<span class="mandatory">*</span>
+                </gdpr:strReplace>
+            </label>
+        </div>
+        <f:if condition="{settings.validation.client}">
+            <div class="powermail_field_error_container powermail_field_error_container_tx_cspowermailgdpr_accepted"></div>
+        </f:if>
+    </div>
 </div>
