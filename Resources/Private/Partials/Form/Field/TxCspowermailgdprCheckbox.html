@@ -4,19 +4,21 @@
 
 <div class="powermail_fieldwrap powermail_fieldwrap_type_check powermail_fieldwrap_tx_cspowermailgdpr_accepted {settings.styles.framework.fieldAndLabelWrappingClasses}">
     <div class="{settings.styles.framework.fieldWrappingClasses}">
-        <div class="{settings.styles.framework.checkClasses}">
-            <f:form.checkbox
-                property="tx_cspowermailgdpr_accepted."
-                value="1"
-                id="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}"
-                additionalAttributes="{required:'required',data-powermail-required-message:'{f:translate(key:\'validationerror_mandatory\')}',data-powermail-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'}"
-                class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
+        <div class="{settings.styles.framework.checkClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}">
+            <label>
+                <f:form.checkbox property="tx_cspowermailgdpr_accepted." value="1"
+                                 id="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}"
+                                 additionalAttributes="{
+                                    required:'required',
+                                    data-powermail-required-message:'{f:translate(key:\'validationerror_mandatory\')}',
+                                    data-powermail-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'
+                                 }"
+                                 class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
 
-            <label for="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}">
                 <f:variable name="privacyLink">
                     <f:link.page pageUid="{settings.privacyPid}" target="_blank"
                                  title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">
-                        <f:translate key="tx_cspowermailgdpr.checkbox.marker" />
+                        <f:translate key="tx_cspowermailgdpr.checkbox.label.linkLabel" />
                     </f:link.page>
                 </f:variable>
 
