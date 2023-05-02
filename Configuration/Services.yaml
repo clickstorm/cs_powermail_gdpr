@@ -6,3 +6,16 @@ services:
 
   Clickstorm\CsPowermailGdpr\:
     resource: '../Classes/*'
+
+  Clickstorm\CsPowermailGdpr\EventListener\FormControllerCreateActionBeforeRenderViewEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'csPowermailGdprFormControllerCreateActionBeforeRenderViewEventListener'
+        event: In2code\Powermail\Events\FormControllerCreateActionBeforeRenderViewEvent
+
+
+  Clickstorm\CsPowermailGdpr\EventListener\FormControllerOptinConfirmActionBeforeRenderViewEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'csPowermailGdprFormControllerOptinConfirmActionBeforeRenderViewEventListener'
+        event: In2code\Powermail\Events\FormControllerOptinConfirmActionBeforeRenderViewEvent
