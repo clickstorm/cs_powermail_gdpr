@@ -4,7 +4,7 @@ namespace Clickstorm\CsPowermailGdpr\EventListener;
 
 use Clickstorm\CsPowermailGdpr\Domain\Model\Mail;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use In2code\Powermail\Controller\FormControllerCreateActionBeforeRenderViewEvent;
+use In2code\Powermail\Events\FormControllerCreateActionBeforeRenderViewEvent;
 
 class FormControllerCreateActionBeforeRenderViewEventListener
 {

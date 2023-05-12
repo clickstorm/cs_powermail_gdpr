@@ -11,7 +11,8 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '4.0.0-dev',
     'constraints' => [
         'depends' => [
-            'typo3' => ''
+            'typo3' => '',
+            'powermail' => ''
         ],
         'conflicts' => [
         ],

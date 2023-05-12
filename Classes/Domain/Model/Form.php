@@ -2,28 +2,16 @@
 
 namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
-/**
- * Class Form
- */
 class Form extends \In2code\Powermail\Domain\Model\Form
 {
-    /**
-     * @var bool
-     */
-    protected $txCspowermailgdprHidden;
+    protected bool $txCspowermailgdprHidden = false;
 
-    /**
-     * @return bool
-     */
-    public function isTxCspowermailgdprHidden()
+    public function isTxCspowermailgdprHidden(): bool
     {
         return $this->txCspowermailgdprHidden;
     }
 
-    /**
-     * @param bool $txCspowermailgdprHidden
-     */
-    public function setTxCspowermailgdprHidden($txCspowermailgdprHidden)
+    public function setTxCspowermailgdprHidden(bool $txCspowermailgdprHidden): void
     {
         $this->txCspowermailgdprHidden = $txCspowermailgdprHidden;
     }

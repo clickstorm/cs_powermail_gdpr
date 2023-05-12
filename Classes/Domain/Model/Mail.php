@@ -2,28 +2,16 @@
 
 namespace Clickstorm\CsPowermailGdpr\Domain\Model;
 
-/**
- * Class Mail
- */
 class Mail extends \In2code\Powermail\Domain\Model\Mail
 {
-    /**
-     * @var bool
-     */
-    protected $txCspowermailgdprAccepted;
+    protected bool $txCspowermailgdprAccepted = false;
 
-    /**
-     * @return bool
-     */
-    public function isTxCspowermailgdprAccepted()
+    public function isTxCspowermailgdprAccepted(): bool
     {
         return $this->txCspowermailgdprAccepted;
     }
 
-    /**
-     * @param bool $txCspowermailgdprAccepted
-     */
-    public function setTxCspowermailgdprAccepted($txCspowermailgdprAccepted)
+    public function setTxCspowermailgdprAccepted(bool $txCspowermailgdprAccepted): void
     {
         $this->txCspowermailgdprAccepted = $txCspowermailgdprAccepted;
     }
