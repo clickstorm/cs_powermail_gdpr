@@ -63,6 +63,6 @@ class FormController
     protected function checkParam()
     {
         $params = GeneralUtility::_GP('tx_powermail_pi1');
-        return $params['field']['tx_cspowermailgdpr_accepted']?1:0;
+        return !empty($params['field']['tx_cspowermailgdpr_accepted']);
     }
 }
