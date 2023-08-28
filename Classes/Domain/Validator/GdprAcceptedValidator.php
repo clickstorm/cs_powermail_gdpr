@@ -42,22 +42,20 @@ class GdprAcceptedValidator extends AbstractValidator
      * @param Mail $mail
      * @return Result
      */
-    public function validate($mail)
+    public function isValid(mixed $value): void
     {
         $result = GeneralUtility::makeInstance(Result::class);
 
         // throw error
-        if(!$mail->getForm()->isTxCspowermailgdprHidden()) {
+        if(!$value->getForm()->isTxCspowermailgdprHidden()) {
             $params = GeneralUtility::_GPmerged('tx_powermail_pi1');
             if(isset($params['field']['tx_cspowermailgdpr_accepted'])
                && !$params['field']['tx_cspowermailgdpr_accepted']
-               && !$mail->isTxCspowermailgdprAccepted()
+               && !$value->isTxCspowermailgdprAccepted()
             ) {
                 $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'cs_powermail_gdpr') . ':';
-                $result->addError(new Error($errorMarker, 123009282, [], 'Error tx_cspowermailgdpr'));
+                $this->result->addError(new Error($errorMarker, 123009282, [], 'Error tx_cspowermailgdpr'));
             }
         }
-
-        return $result;
     }
 }
