@@ -13,7 +13,4 @@ defined('TYPO3') || die();
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Powermail\Domain\Model\Form::class] = [
         'className' => \Clickstorm\CsPowermailGdpr\Domain\Model\Form::class,
     ];
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\In2code\Powermail\Domain\Factory\FileFactory::class] = [
-        'className' => \Clickstorm\CsPowermailGdpr\Domain\Factory\FileFactory::class,
-    ];
 })();
