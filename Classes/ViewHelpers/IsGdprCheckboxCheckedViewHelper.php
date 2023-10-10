@@ -33,8 +33,8 @@ class IsGdprCheckboxCheckedViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        if(isset($_POST['tx_powermail_pi1']['field'][$arguments['name']])) {
-            $checked = $_POST['tx_powermail_pi1']['field'][$arguments['name']][0] ? true : false;
+        if(isset($_POST['tx_powermail_pi1']['field'][$arguments['property']])) {
+            $checked = $_POST['tx_powermail_pi1']['field'][$arguments['property']][0] ? true : false;
         }
         return $checked ?? false;
     }
