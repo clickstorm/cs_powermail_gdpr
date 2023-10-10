@@ -6,7 +6,9 @@
     <div class="{settings.styles.framework.fieldWrappingClasses}">
         <div class="{settings.styles.framework.checkClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}">
             <label>
-                <f:form.checkbox property="tx_cspowermailgdpr_accepted." value="1"
+                <f:form.checkbox property="tx_cspowermailgdpr_accepted"
+                                 value="1"
+                                 checked="{gdpr:isGdprCheckboxChecked(property: 'tx_cspowermailgdpr_accepted')}"
                                  id="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}"
                                  additionalAttributes="{
                                     required:'required',
