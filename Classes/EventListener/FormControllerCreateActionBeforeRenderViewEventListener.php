@@ -11,7 +11,7 @@ class FormControllerCreateActionBeforeRenderViewEventListener
     public function __invoke(FormControllerCreateActionBeforeRenderViewEvent $event)
     {
         $mail = $event->getMail();
-        if (!$mail->isTxCspowermailgdprAccepted()) {
+        if (!$mail->getForm()->isTxCspowermailgdprHidden() && !$mail->isTxCspowermailgdprAccepted()) {
             $mail->setTxCspowermailgdprAccepted(self::checkParam());
         }
     }
