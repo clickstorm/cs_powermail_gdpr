@@ -14,8 +14,8 @@
 		"typo3-ter/cs_powermail_gdpr": "*"
 	},
 	"require": {
-		"typo3/cms-core": "^12",
-		"in2code/powermail": "^12 || dev-main"
+		"typo3/cms-core": "^13",
+		"in2code/powermail": "^13 || dev-main"
 	},
 	"autoload": {
 		"psr-4": {
