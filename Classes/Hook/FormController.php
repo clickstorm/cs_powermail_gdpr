@@ -39,7 +39,7 @@ class FormController
      * @param string $hash
      * @param \In2code\Powermail\Controller\FormController $formController
      */
-    public function manipulateForm($mail, $hash, $formController)
+    public function manipulateForm($mail, $hash, $formController): void
     {
         if (!$mail->isTxCspowermailgdprAccepted()) {
             $mail->setTxCspowermailgdprAccepted($this->checkParam());
@@ -52,7 +52,7 @@ class FormController
      * @param Mail $mail
      * @param \In2code\Powermail\Controller\FormController $formController
      */
-    public function manipulateFormForConfirmation($mail, $formController)
+    public function manipulateFormForConfirmation($mail, $formController): void
     {
         $mail->setTxCspowermailgdprAccepted($this->checkParam());
     }
@@ -62,7 +62,7 @@ class FormController
      */
     protected function checkParam()
     {
-        $params = GeneralUtility::_GP('tx_powermail_pi1');
+        $params = $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_powermail_pi1'] ?? $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_powermail_pi1'] ?? null;
         return !empty($params['field']['tx_cspowermailgdpr_accepted']);
     }
 }

@@ -30,24 +30,17 @@ class StrReplaceViewHelper extends AbstractViewHelper
             'subject',
             'string',
             'String "subject" to perform str_replace() on',
-            false
+            false,
+            ''
         );
     }
 
-    /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
-     * @return mixed
-     */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
-        $search = $arguments['search'];
-        $replace = $arguments['replace'];
-        $subject = $arguments['subject'] ?: $renderChildrenClosure();
+    public function render(): string
+    {
+        $search = $this->arguments['search'] ?? '';
+        $replace = $this->arguments['replace'] ?? '';
+        $subject = $this->arguments['subject'] ?: $this->renderChildren();
+
         return str_replace($search, $replace, $subject);
     }
 }
