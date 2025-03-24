@@ -23,15 +23,18 @@ class GdprAcceptedValidator extends AbstractValidator
 
         // throw error
         if(!$value->getForm()->isTxCspowermailgdprHidden()) {
-            $params = $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_powermail_pi1'];
-            ArrayUtility::mergeRecursiveWithOverrule($params, $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_powermail_pi1']);
+            $params = $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_powermail_pi1'] ?? [];
 
-            if(isset($params['field']['tx_cspowermailgdpr_accepted'])
-               && !$params['field']['tx_cspowermailgdpr_accepted']
-               && !$value->isTxCspowermailgdprAccepted()
-            ) {
-                $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'CsPowermailGdpr') . ':';
-                $this->result->addError(new Error($errorMarker, 123009282, [], 'Error tx_cspowermailgdpr'));
+            if ($params['action'] != "optinConfirm") {
+                ArrayUtility::mergeRecursiveWithOverrule($params, $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_powermail_pi1'] ?? []);
+
+                if(isset($params['field']['tx_cspowermailgdpr_accepted'])
+                    && !$params['field']['tx_cspowermailgdpr_accepted']
+                    && !$value->isTxCspowermailgdprAccepted()
+                ) {
+                    $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'CsPowermailGdpr') . ':';
+                    $this->result->addError(new Error($errorMarker, 123009282, [], 'Error tx_cspowermailgdpr'));
+                }
             }
         }
     }
