@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf" date="2023-03-22T09:20:32Z" product-name="cs_powermail_gdpr">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf" date="2025-07-11T09:25:19Z" product-name="cs_powermail_gdpr">
 		<header/>
 		<body>
 			<trans-unit id="\In2code\Powermail\Domain\Model\Mail.txCspowermailgdprAccepted" resname="\In2code\Powermail\Domain\Model\Mail.txCspowermailgdprAccepted">

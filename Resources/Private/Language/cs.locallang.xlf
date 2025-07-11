@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en" target-language="fr" datatype="plaintext" original="EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf" date="2025-07-11T09:25:19Z" product-name="cs_powermail_gdpr">
+	<file source-language="en" target-language="cs" datatype="plaintext" original="EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf" date="2025-07-11T09:25:19Z" product-name="cs_powermail_gdpr">
 		<header/>
 		<body>
 			<trans-unit id="\In2code\Powermail\Domain\Model\Mail.txCspowermailgdprAccepted" resname="\In2code\Powermail\Domain\Model\Mail.txCspowermailgdprAccepted">
 				<source><![CDATA[Privacy policy accepted]]></source>
-				<target><![CDATA[Politique de confidentialité acceptée]]></target>
+				<target><![CDATA[Zásady ochrany osobních údajů přijaty]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label" resname="tx_cspowermailgdpr.checkbox.label">
 				<source><![CDATA[I accept the ###privacyUrl###.]]></source>
-				<target><![CDATA[J'accepte la ###privacyUrl###.]]></target>
+				<target><![CDATA[Přijímám ###privacyUrl###.]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkTitle" resname="tx_cspowermailgdpr.checkbox.label.linkTitle">
 				<source><![CDATA[Show privacy policy]]></source>
-				<target><![CDATA[Afficher la politique de confidentialité]]></target>
+				<target><![CDATA[Zobrazit zásady ochrany osobních údajů]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.label.linkLabel" resname="tx_cspowermailgdpr.checkbox.label.linkLabel">
 				<source><![CDATA[privacy policy]]></source>
-				<target><![CDATA[politique de confidentialité]]></target>
+				<target><![CDATA[zásady ochrany osobních údajů]]></target>
 			</trans-unit>
 			<trans-unit id="tx_cspowermailgdpr.checkbox.marker" resname="tx_cspowermailgdpr.checkbox.marker">
 				<source><![CDATA[Privacy Policy]]></source>
-				<target><![CDATA[Politique de confidentialité]]></target>
+				<target><![CDATA[Zásady ochrany osobních údajů]]></target>
 			</trans-unit>
 		</body>
 	</file>
