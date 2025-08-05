@@ -6,10 +6,21 @@
 	<f:if condition="{page.css} != 'nolabel'">
 		<legend class="powermail_legend">{page.title}</legend>
 	</f:if>
-
+	
 	<f:for each="{page.fields}" as="field" iteration="iteration">
 		<vh:misc.createRowTags columns="{settings.styles.numberOfColumns}" class="{settings.styles.framework.rowClasses}" iteration="{iteration}">
 			<f:render partial="Form/Field/{vh:String.Upper(string:field.type)}" arguments="{field:field,form:form,settings:settings}" />
 		</vh:misc.createRowTags>
 	</f:for>
+
+	<f:if condition="{settings.main.moresteps}">
+		<div class="powermail_fieldwrap powermail_tab_navigation">
+			<f:if condition="!{iterationPages.isFirst}">
+				<button type="button" class="btn btn-secondary" data-powermail-morestep-show="{iterationPages.index - 1}">&lt;</button>
+			</f:if>
+			<f:if condition="!{iterationPages.isLast}">
+				<button type="button" class="btn btn-primary" data-powermail-morestep-show="{iterationPages.cycle}" data-powermail-morestep-previous>&gt;</button>
+			</f:if>
+		</div>
+	</f:if>
 </fieldset>
