@@ -5,7 +5,6 @@
 <div class="powermail_fieldwrap powermail_fieldwrap_type_check powermail_fieldwrap_tx_cspowermailgdpr_accepted {settings.styles.framework.fieldAndLabelWrappingClasses}">
     <div class="{settings.styles.framework.fieldWrappingClasses}">
         <div class="{settings.styles.framework.checkClasses} {vh:validation.errorClass(field:field, class:'powermail_field_error')}">
-            <label>
                 <f:form.checkbox property="tx_cspowermailgdpr_accepted"
                                  value="1"
                                  checked="{gdpr:isGdprCheckboxChecked(property: 'tx_cspowermailgdpr_accepted')}"
@@ -16,7 +15,7 @@
                                     data-powermail-errors-container:'.powermail_field_error_container_tx_cspowermailgdpr_accepted'
                                  }"
                                  class="powermail_checkbox powermail_checkbox_tx_cspowermailgdpr_accepted"/>
-
+            <label for="powermail_field_tx_cspowermailgdpr_accepted_{form.uid}">
                 <f:variable name="privacyLink">
                     <f:link.page pageUid="{settings.privacyPid}" target="_blank"
                                  title="{f:translate(key:'tx_cspowermailgdpr.checkbox.label.linkTitle')}">
