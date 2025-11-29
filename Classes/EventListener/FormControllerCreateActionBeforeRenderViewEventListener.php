@@ -16,6 +16,12 @@ class FormControllerCreateActionBeforeRenderViewEventListener
         }
     }
 
+    public function onConfirmationAction(\In2code\Powermail\Events\FormControllerConfirmationActionEvent $event) {
+        $mail = $event->getMail();
+        if (!$mail->getForm()->isTxCspowermailgdprHidden() && !$mail->isTxCspowermailgdprAccepted()) {
+            $mail->setTxCspowermailgdprAccepted(self::checkParam());
+        }
+    }
     public static function checkParam(): int
     {
         $params = $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_powermail_pi1'] ?? $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_powermail_pi1'] ?? null;

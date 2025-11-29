@@ -12,3 +12,7 @@ services:
       - name: event.listener
         identifier: 'csPowermailGdprFormControllerCreateActionBeforeRenderViewEventListener'
         event: In2code\Powermail\Events\FormControllerCreateActionBeforeRenderViewEvent
+      - name: event.listener
+        identifier: 'csPowermailGdprFormControllerConfirmationActionEventListener'
+        event: In2code\Powermail\Events\FormControllerConfirmationActionEvent
+        method: 'onConfirmationAction'
