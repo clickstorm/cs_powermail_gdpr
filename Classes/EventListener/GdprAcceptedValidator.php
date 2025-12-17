@@ -2,7 +2,7 @@
 
 namespace Clickstorm\CsPowermailGdpr\EventListener;
 
-use In2code\Powermail\Domain\Model\Answer;
+use In2code\Powermail\Domain\Model\Field;
 use In2code\Powermail\Events\CustomValidatorEvent;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Attribute\AsEventListener;
@@ -27,18 +27,14 @@ class GdprAcceptedValidator
             if ($params['action'] != "optinConfirm") {
                 ArrayUtility::mergeRecursiveWithOverrule($params, $this->request->getParsedBody()['tx_powermail_pi1'] ?? []);
 
-                if(isset($params['field']['tx_cspowermailgdpr_accepted'])
+                if(!isset($params['field']['tx_cspowermailgdpr_accepted'])
+                    || isset($params['field']['tx_cspowermailgdpr_accepted'])
                     && !$params['field']['tx_cspowermailgdpr_accepted']
                     && !$mail->isTxCspowermailgdprAccepted()
                 ) {
-                    $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'CsPowermailGdpr') . ':';
-                    $field = null;
-                    foreach ($mail->getForm()->getFields() as $field) {
-                        /** @var Answer $answer */
-                        if ($field->getType() == "submit") {
-                            break;
-                        }
-                    }
+                    $errorMarker = LocalizationUtility::translate('tx_cspowermailgdpr.checkbox.marker', 'CsPowermailGdpr');
+                    $field = new Field();
+                    $field->setMarker('tx_cspowermailgdpr_accepted_' . $event->getMail()->getForm()->getUid());
                     $event->getCustomValidator()->setErrorAndMessage($field, $errorMarker);
                 }
             }
