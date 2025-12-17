@@ -2,7 +2,6 @@
 
 namespace Clickstorm\CsPowermailGdpr\ViewHelpers;
 
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**

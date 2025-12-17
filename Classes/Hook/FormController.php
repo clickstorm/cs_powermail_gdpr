@@ -3,7 +3,6 @@
 namespace Clickstorm\CsPowermailGdpr\Hook;
 
 use Clickstorm\CsPowermailGdpr\Domain\Model\Mail;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /***************************************************************
  *

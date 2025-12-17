@@ -21,13 +21,13 @@ class GdprAcceptedValidator
         $this->request = $event->getCustomValidator()->getRequest();
         $mail = $event->getMail();
         // throw error
-        if(!$mail->getForm()->isTxCspowermailgdprHidden()) {
+        if (!$mail->getForm()->isTxCspowermailgdprHidden()) {
             $params = $event->getCustomValidator()->getRequest()->getQueryParams()['tx_powermail_pi1'] ?? [];
 
-            if ($params['action'] != "optinConfirm") {
+            if ($params['action'] != 'optinConfirm') {
                 ArrayUtility::mergeRecursiveWithOverrule($params, $this->request->getParsedBody()['tx_powermail_pi1'] ?? []);
 
-                if(!isset($params['field']['tx_cspowermailgdpr_accepted'])
+                if (!isset($params['field']['tx_cspowermailgdpr_accepted'])
                     || isset($params['field']['tx_cspowermailgdpr_accepted'])
                     && !$params['field']['tx_cspowermailgdpr_accepted']
                     && !$mail->isTxCspowermailgdprAccepted()

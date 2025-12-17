@@ -9,9 +9,9 @@ $tempColumns = [
         'exclude' => 1,
         'config' => [
             'type' => 'check',
-            'readOnly' => 1
-        ]
-    ]
+            'readOnly' => 1,
+        ],
+    ],
 ];
 
 // add new fields
