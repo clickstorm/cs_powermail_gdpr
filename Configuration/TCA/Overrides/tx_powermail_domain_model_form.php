@@ -10,8 +10,8 @@ $tempColumns = [
         'l10n_mode' => 'exclude',
         'config' => [
             'type' => 'check',
-        ]
-    ]
+        ],
+    ],
 ];
 
 // add new fields

@@ -73,6 +73,6 @@ Show Confirmation Page
 		</f:if>
 	</f:for>
 
-	<f:form.hidden property="tx_cspowermailgdpr_accepted." value="{mail.txCspowermailgdprAccepted}"/>
+	<f:form.hidden property="tx_cspowermailgdpr_accepted" value="{mail.txCspowermailgdprAccepted ? 1 : 0}"/>
 	<f:form.hidden name="mail[form]" value="{mail.form.uid}" class="powermail_form_uid" />
 </f:section>

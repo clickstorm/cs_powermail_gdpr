@@ -7,12 +7,12 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Marc Hirdes',
     'author_email' => 'hirdes@clickstorm.de',
     'author_company' => 'clickstorm GmbH',
-    'state' => 'beta',
-    'version' => '4.1.0',
+    'state' => 'stable',
+    'version' => '5.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.4.99',
-            'powermail' => ''
+            'typo3' => '13.4.0-13.4.99',
+            'powermail' => '',
         ],
         'conflicts' => [
         ],
