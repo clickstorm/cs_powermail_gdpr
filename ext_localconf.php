@@ -4,9 +4,10 @@ defined('TYPO3') || die();
 
 (function () {
     if ((new \TYPO3\CMS\Core\Information\Typo3Version())->getMajorVersion() >= 14) {
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['localization']['resourceOverrides']['EXT:powermail/Resources/Private/Language/locallang.xlf']
+        $GLOBALS['TYPO3_CONF_VARS']['LANG']['resourceOverrides']['EXT:powermail/Resources/Private/Language/locallang.xlf'][]
             = 'EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf';
     } else {
+        //@extensionScannerIgnoreLine
         $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:powermail/Resources/Private/Language/locallang.xlf'][]
             = 'EXT:cs_powermail_gdpr/Resources/Private/Language/locallang.xlf';
     }
